@@ -3,6 +3,17 @@
 /node_modules
 /build
 
+# cdk
+.cdk.staging
+cdk.out
+
+# environment config
+.env
+
+# build
+.serverless
+.webpack
+
 # Logs
 logs
 *.log

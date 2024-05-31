@@ -4,7 +4,8 @@
   "sourceRoot": "apps/easy-commerce/src",
   "compilerOptions": {
     "deleteOutDir": true,
-    "tsConfigPath": "apps/easy-commerce/tsconfig.app.json"
+    "tsConfigPath": "apps/easy-commerce/tsconfig.app.json",
+    "webpack": true
   },
   "monorepo": true,
   "root": "apps/easy-commerce",
@@ -25,6 +26,24 @@
       "sourceRoot": "apps/auth/src",
       "compilerOptions": {
         "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "helper": {
+      "type": "library",
+      "root": "libs/helper",
+      "entryFile": "index",
+      "sourceRoot": "libs/helper/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/helper/tsconfig.lib.json"
       }
     }
   }
