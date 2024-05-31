@@ -1,8 +1,31 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/easy-commerce/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "tsConfigPath": "apps/easy-commerce/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/easy-commerce",
+  "projects": {
+    "easy-commerce": {
+      "type": "application",
+      "root": "apps/easy-commerce",
+      "entryFile": "main",
+      "sourceRoot": "apps/easy-commerce/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/easy-commerce/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    }
   }
 }
